@@ -1,9 +1,10 @@
 package model;
-
+import reserver.CalendrierAnnuel;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
 
 class CalendrierAnnuelTest {
 	static CalendrierAnnuel calendrier;
@@ -18,7 +19,7 @@ class CalendrierAnnuelTest {
 		assertNotNull(calendrier, "calendrier null");
 	}
 
-	@Test
+	@Test 
 	void testEstLibre() {
 		assertTrue(calendrier.estLibre(31,12), "31/12 devrait être libre");
 	}
@@ -30,4 +31,4 @@ class CalendrierAnnuelTest {
 		assertFalse(calendrier.reserver(20,10), "reservation du 20/10 ne devrait pas être possible");
 	}
 
-}
+} 
